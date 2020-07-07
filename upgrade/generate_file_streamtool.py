@@ -11,7 +11,7 @@ def modify_file_version1(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str30 in line:
                 line = line.replace(old_str30, new_str30)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
 
 
 def modify_file_version2(old_file_path, new_file_path, old_str1, new_str1, old_str2, new_str2, old_str20, new_str20,
@@ -27,7 +27,7 @@ def modify_file_version2(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str30 in line:
                 line = line.replace(old_str30, new_str30)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
 
 
 def modify_file_version3(old_file_path, new_file_path, old_str1, new_str1, old_str2, new_str2, old_str3, new_str3,
@@ -37,7 +37,7 @@ def modify_file_version3(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str1 in line:
                 line = line.replace(old_str1, new_str1)
             if old_str2 in line:
-                print old_str2, new_str2
+                print(old_str2, new_str2)
                 line = line.replace(old_str2, new_str2)
             if old_str3 in line:
                 line = line.replace(old_str3, new_str3)
@@ -46,7 +46,7 @@ def modify_file_version3(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str30 in line:
                 line = line.replace(old_str30, new_str30)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
 
 
 def modify_file_version4(old_file_path, new_file_path, old_str1, new_str1, old_str2, new_str2, old_str3, new_str3,
@@ -56,7 +56,7 @@ def modify_file_version4(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str1 in line:
                 line = line.replace(old_str1, new_str1)
             if old_str2 in line:
-                print old_str2, new_str2
+                print(old_str2, new_str2)
                 line = line.replace(old_str2, new_str2)
             if old_str3 in line:
                 line = line.replace(old_str3, new_str3)
@@ -67,7 +67,7 @@ def modify_file_version4(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str30 in line:
                 line = line.replace(old_str30, new_str30)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
 
 
 def modify_file_version7(old_file_path, new_file_path, old_str1, new_str1, old_str3, new_str3,
@@ -90,7 +90,8 @@ def modify_file_version7(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str60 in line:
                 line = line.replace(old_str60, new_str60)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
+
 
 def modify_file_version9(old_file_path, new_file_path, old_str1, new_str1, old_str2, new_str2, old_str3, new_str3,
                          old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40, new_str40,
@@ -100,7 +101,7 @@ def modify_file_version9(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str1 in line:
                 line = line.replace(old_str1, new_str1)
             if old_str2 in line:
-                print old_str2, new_str2
+                print(old_str2, new_str2)
                 line = line.replace(old_str2, new_str2)
             if old_str3 in line:
                 line = line.replace(old_str3, new_str3)
@@ -117,7 +118,7 @@ def modify_file_version9(old_file_path, new_file_path, old_str1, new_str1, old_s
             if old_str60 in line:
                 line = line.replace(old_str60, new_str60)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
 
 
 def modify_file_version10(old_file_path, new_file_path, old_str1, new_str1, old_str2, new_str2, old_str3, new_str3,
@@ -128,7 +129,7 @@ def modify_file_version10(old_file_path, new_file_path, old_str1, new_str1, old_
             if old_str1 in line:
                 line = line.replace(old_str1, new_str1)
             if old_str2 in line:
-                print old_str2, new_str2
+                print(old_str2, new_str2)
                 line = line.replace(old_str2, new_str2)
             if old_str3 in line:
                 line = line.replace(old_str3, new_str3)
@@ -147,7 +148,7 @@ def modify_file_version10(old_file_path, new_file_path, old_str1, new_str1, old_
             if old_str70 in line:
                 line = line.replace(old_str70, new_str70)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
 
 
 def modify_file_version11(old_file_path, new_file_path, old_str1, new_str1, old_str2, new_str2, old_str3, new_str3,
@@ -158,7 +159,7 @@ def modify_file_version11(old_file_path, new_file_path, old_str1, new_str1, old_
             if old_str1 in line:
                 line = line.replace(old_str1, new_str1)
             if old_str2 in line:
-                print old_str2, new_str2
+                print(old_str2, new_str2)
                 line = line.replace(old_str2, new_str2)
             if old_str3 in line:
                 line = line.replace(old_str3, new_str3)
@@ -179,7 +180,7 @@ def modify_file_version11(old_file_path, new_file_path, old_str1, new_str1, old_
             if old_str80 in line:
                 line = line.replace(old_str80, new_str80)
             f2.write(line)
-    print "generate new file {} success".format(new_file_path)
+    print("generate new file {} success".format(new_file_path))
 
 
 def make_special_bootlogo_file():
@@ -410,7 +411,7 @@ def make_special_bootlogo_file():
                                  new_str40, old_str50, new_str50, old_str60, new_str60)
             new_file_path = "./ekt_loader_tool-specil-{}.cfg"
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_app_bootlogo_file():
@@ -450,7 +451,7 @@ def make_app_bootlogo_file():
 
         modify_file_version7(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3,
                              new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                             new_str40,old_str60, new_str60)
+                             new_str40, old_str60, new_str60)
         new_file_path = "./upgrade-{}-{}.cfg"
 
 
@@ -490,7 +491,7 @@ def make_incorrect_hardversion():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_incorrect_oui():
@@ -528,7 +529,7 @@ def make_incorrect_oui():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_unsigend_app():
@@ -583,7 +584,7 @@ def make_wrong_sigend():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_incorrect_manufacturedes():
@@ -621,7 +622,7 @@ def make_incorrect_manufacturedes():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_incorrect_machinedes():
@@ -659,7 +660,7 @@ def make_incorrect_machinedes():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_downloadpid_1030_tableid_1():
@@ -701,7 +702,7 @@ def make_downloadpid_1030_tableid_1():
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70, old_str80,
                           new_str80)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_dsi_crc():
@@ -739,7 +740,7 @@ def make_dsi_crc():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_dii_crc():
@@ -777,7 +778,7 @@ def make_dii_crc():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_ddb_crc():
@@ -815,7 +816,7 @@ def make_ddb_crc():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_downloadheader_crc():
@@ -853,7 +854,7 @@ def make_downloadheader_crc():
                           new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                           new_str40, old_str50, new_str50, old_str60, new_str60, old_str70, new_str70)
 
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_big_file():
@@ -888,7 +889,7 @@ def make_big_file():
     modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
                          new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                          new_str40, old_str50, new_str50, old_str60, new_str60)
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def make_excessive_big_file():
@@ -924,7 +925,7 @@ def make_excessive_big_file():
     modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
                          new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
                          new_str40, old_str50, new_str50, old_str60, new_str60)
-    print "streantool file Generate complete"
+    print("streantool file Generate complete")
 
 
 def create_folder(folder_name):
@@ -939,7 +940,7 @@ def create_folder(folder_name):
     if not os.path.exists(targetPath):
         os.makedirs(targetPath)
     else:
-        print "file already exists!"
+        print("file already exists!")
 
 
 if __name__ == '__main__':
