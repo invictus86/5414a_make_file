@@ -1032,4 +1032,4 @@ if __name__ == '__main__':
     make_downloadheader_crc()
     # make_big_file()
     # make_excessive_big_file()
-    make_special_bootlogo_file()
+    # make_special_bootlogo_file()
