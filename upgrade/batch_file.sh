@@ -23,4 +23,14 @@ chmod -R 777 ./*
 ./make_upgradefile-incorrect-manufacturedes.sh
 ./make_upgradefile-incorrect-oui.sh
 ./make_downloadheader-crc.sh
+./make_upgradefile-big.sh
+./make_upgradefile_excessive-big.sh
+./make_upgradefile-spec-1100.sh
+./make_upgradefile-spec-1101.sh
+./make_upgradefile-spec-1102.sh
+./make_upgradefile-spec-1103.sh
+./make_upgradefile-spec-1104.sh
+./make_upgradefile-spec-1202.sh
+./make_upgradefile-spec-1203.sh
+./make_upgradefile-unsigned-app.sh
 

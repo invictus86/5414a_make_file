@@ -214,26 +214,24 @@ def modify_file_version11(old_file_path, new_file_path, old_str1, new_str1, old_
 def make_special_bootlogo_file():
     new_str_dict = {1200: 1200, 1201: 1201, 1202: 1202, 1203: 1203, 1204: 1204, 1205: 1205, 1100: 1100, 1101: 1101, 1102: 1102,
                     1103: 1103, 1104: 1104}
+    # old_file_path = "./make_upgradefile.sh"
+    # new_file_path = "./make_upgradefile-incorrect-hardver.sh"
+    # old_str1 = "upgrade.cfg"
+    # old_str3 = 'UpgradeFile.bin'
+
     old_file_path = "./make_upgradefile.sh"
-    new_file_path = "./upgrade-specil-{}.cfg"
-    old_str1 = "DSN 1000"
-    old_str2 = 'InputFileNumber 5'
+    new_file_path = "./make_upgradefile-spec-{}.sh"
 
-    old_str3 = 'InputFile1 "4 vmlinux.bin 1 1000"'
-    old_str4 = 'InputFile2 "5 fsi.bin 1 1000"'
-    old_str20 = 'InputFile3 "6 bootlogo.bin 1 1000"'
-    old_str30 = 'InputFile4 "8 see.ubo 1 1000"'
-    old_str40 = 'InputFile5 "10 EKT_CFG_DATA.squashfs 1 1000"'
-
-    old_str50 = 'USBOutputFile "UpgradeFile.bin"'
-    old_str60 = 'OTAUpgOutputFile "UpgradeFile.ts"'
+    old_str1 = "upgrade.cfg"
+    old_str3 = 'UpgradeFile.bin'
 
     for dsn_ver, bootlogo_ver in new_str_dict.items():
         # for new_str1 in new_str_list:
-        if dsn_ver == 1200:
+        # if dsn_ver == 1200:
+        if dsn_ver == 9999:
             new_file_path = new_file_path.format(dsn_ver)
             new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            # new_str2 = 'InputFileNumber 1'
 
             new_str3 = 'InputFile1 "6 bootlogo_white.bin 1 {}"'.format(bootlogo_ver)
             new_str4 = ''
@@ -241,203 +239,140 @@ def make_special_bootlogo_file():
             new_str30 = ''
             new_str40 = ''
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/bootlogo_white//UpgradeFile.bin"'
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/bootlogo_white//UpgradeFile.ts"'
+            # new_str50 = 'USBOutputFile "./DSN5414a_100/bootlogo_white//UpgradeFile.bin"'
+            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/bootlogo_white/UpgradeFile.ts"'
 
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
+            # modify_file_version7(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3,
+            #                      new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
+            #                      new_str40, old_str60, new_str60)
             new_file_path = "./upgrade-specil-{}.cfg"
 
-        elif dsn_ver == 1201:
-            new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
-
-            new_str3 = 'InputFile1 "6 bootlogo_black_no_progress.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
-
-            new_str50 = 'USBOutputFile "./DSN5414a_100/bootlogo_black_no_progress/UpgradeFile.bin"'
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/bootlogo_black_no_progress/UpgradeFile.ts"'
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
+        # elif dsn_ver == 1201:
+        #     new_file_path = new_file_path.format(dsn_ver)
+        #     new_str_1 = "DSN {}".format(dsn_ver)
+        #     new_str2 = 'InputFileNumber 1'
+        #
+        #     new_str3 = 'InputFile1 "6 bootlogo_black_no_progress.bin 1 {}"'.format(bootlogo_ver)
+        #     new_str4 = ''
+        #     new_str20 = ''
+        #     new_str30 = ''
+        #     new_str40 = ''
+        #
+        #     new_str50 = 'USBOutputFile "./DSN5414a_100/bootlogo_black_no_progress/UpgradeFile.bin"'
+        #     new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/bootlogo_black_no_progress/UpgradeFile.ts"'
+        #
+        #     modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
+        #                          new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
+        #                          new_str40, old_str50, new_str50, old_str60, new_str60)
+        #     new_file_path = "./upgrade-specil-{}.cfg"
 
         elif dsn_ver == 1202:
             new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            new_str_1 = "upgrade-specil-{}.cfg".format(dsn_ver)
+            new_str3 = './DSN5414a_100/loader_resource_white/UpgradeFile.bin'
 
-            new_str3 = 'InputFile1 "7 loader_resource_white.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
+            modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/loader_resource_white//UpgradeFile.bin"'
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/loader_resource_white//UpgradeFile.ts"'
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
+            print("streantool file Generate complete")
+            new_file_path = "./make_upgradefile-spec-{}.sh"
 
         elif dsn_ver == 1203:
             new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            new_str_1 = "upgrade-specil-{}.cfg".format(dsn_ver)
+            new_str3 = './DSN5414a_100/loader_resource_black/UpgradeFile.bin'
 
-            new_str3 = 'InputFile1 "7 loader_resource_black.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
+            modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/loader_resource_black//UpgradeFile.bin"'
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/loader_resource_black//UpgradeFile.ts"'
+            print("streantool file Generate complete")
+            new_file_path = "./make_upgradefile-spec-{}.sh"
 
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
-
-        elif dsn_ver == 1204:
-            new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
-
-            new_str3 = 'InputFile1 "6 boot_err_code.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
-
-            new_str50 = 'USBOutputFile "./DSN5414a_100/boot_err_code/UpgradeFile.bin"'
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/boot_err_code/UpgradeFile.ts"'
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
-
-        elif dsn_ver == 1205:
-            new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
-
-            new_str3 = 'InputFile1 "7 loader_err_code.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
-
-            new_str50 = 'USBOutputFile "./DSN5414a_100/loader_err_code/UpgradeFile.bin"'
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/loader_err_code/UpgradeFile.ts"'
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
-
+        # elif dsn_ver == 1204:
+        #     new_file_path = new_file_path.format(dsn_ver)
+        #     new_str_1 = "DSN {}".format(dsn_ver)
+        #     new_str2 = 'InputFileNumber 1'
+        #
+        #     new_str3 = 'InputFile1 "6 boot_err_code.bin 1 {}"'.format(bootlogo_ver)
+        #     new_str4 = ''
+        #     new_str20 = ''
+        #     new_str30 = ''
+        #     new_str40 = ''
+        #
+        #     new_str50 = 'USBOutputFile "./DSN5414a_100/boot_err_code/UpgradeFile.bin"'
+        #     new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/boot_err_code/UpgradeFile.ts"'
+        #
+        #     modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
+        #                          new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
+        #                          new_str40, old_str50, new_str50, old_str60, new_str60)
+        #     new_file_path = "./upgrade-specil-{}.cfg"
+        #
+        # elif dsn_ver == 1205:
+        #     new_file_path = new_file_path.format(dsn_ver)
+        #     new_str_1 = "DSN {}".format(dsn_ver)
+        #     new_str2 = 'InputFileNumber 1'
+        #
+        #     new_str3 = 'InputFile1 "7 loader_err_code.bin 1 {}"'.format(bootlogo_ver)
+        #     new_str4 = ''
+        #     new_str20 = ''
+        #     new_str30 = ''
+        #     new_str40 = ''
+        #
+        #     new_str50 = 'USBOutputFile "./DSN5414a_100/loader_err_code/UpgradeFile.bin"'
+        #     new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/loader_err_code/UpgradeFile.ts"'
+        #
+        #     modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
+        #                          new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
+        #                          new_str40, old_str50, new_str50, old_str60, new_str60)
+        #     new_file_path = "./upgrade-specil-{}.cfg"
+        #
         elif dsn_ver == 1100:
             new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            new_str_1 = "upgrade-specil-{}.cfg".format(dsn_ver)
+            new_str3 = './DSN5414a_100/portion/{}/UpgradeFile.bin'.format(dsn_ver)
 
-            new_str3 = 'InputFile1 "4 vmlinux.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
+            modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.bin"'.format(dsn_ver)
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.ts"'.format(dsn_ver)
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
+            print("streantool file Generate complete")
+            new_file_path = "./make_upgradefile-spec-{}.sh"
 
         elif dsn_ver == 1101:
             new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            new_str_1 = "upgrade-specil-{}.cfg".format(dsn_ver)
+            new_str3 = './DSN5414a_100/portion/{}/UpgradeFile.bin'.format(dsn_ver)
 
-            new_str3 = 'InputFile1 "5 fsi.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
+            modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.bin"'.format(dsn_ver)
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.ts"'.format(dsn_ver)
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
+            print("streantool file Generate complete")
+            new_file_path = "./make_upgradefile-spec-{}.sh"
 
         elif dsn_ver == 1102:
             new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            new_str_1 = "upgrade-specil-{}.cfg".format(dsn_ver)
+            new_str3 = './DSN5414a_100/portion/{}/UpgradeFile.bin'.format(dsn_ver)
 
-            new_str3 = 'InputFile1 "6 bootlogo.bin 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
+            modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.bin"'.format(dsn_ver)
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.ts"'.format(dsn_ver)
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
+            print("streantool file Generate complete")
+            new_file_path = "./make_upgradefile-spec-{}.sh"
 
         elif dsn_ver == 1103:
             new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            new_str_1 = "upgrade-specil-{}.cfg".format(dsn_ver)
+            new_str3 = './DSN5414a_100/portion/{}/UpgradeFile.bin'.format(dsn_ver)
 
-            new_str3 = 'InputFile1 "8 see.ubo 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
+            modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.bin"'.format(dsn_ver)
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.ts"'.format(dsn_ver)
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
+            print("streantool file Generate complete")
+            new_file_path = "./make_upgradefile-spec-{}.sh"
 
         elif dsn_ver == 1104:
             new_file_path = new_file_path.format(dsn_ver)
-            new_str_1 = "DSN {}".format(dsn_ver)
-            new_str2 = 'InputFileNumber 1'
+            new_str_1 = "upgrade-specil-{}.cfg".format(dsn_ver)
+            new_str3 = './DSN5414a_100/portion/{}/UpgradeFile.bin'.format(dsn_ver)
 
-            new_str3 = 'InputFile1 "10 EKT_CFG_DATA.squashfs 1 {}"'.format(bootlogo_ver)
-            new_str4 = ''
-            new_str20 = ''
-            new_str30 = ''
-            new_str40 = ''
+            modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-            new_str50 = 'USBOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.bin"'.format(dsn_ver)
-            new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/portion/{}/UpgradeFile.ts"'.format(dsn_ver)
-
-            modify_file_version9(old_file_path, new_file_path, old_str1, str(new_str_1), old_str2, new_str2, old_str3,
-                                 new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                                 new_str40, old_str50, new_str50, old_str60, new_str60)
-            new_file_path = "./upgrade-specil-{}.cfg"
+            print("streantool file Generate complete")
+            new_file_path = "./make_upgradefile-spec-{}.sh"
 
     print("streantool file Generate complete")
 
@@ -453,16 +388,14 @@ def make_app_bootlogo_file():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-{}-{}.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
-
+    old_str3 = 'UpgradeFile.bin'
 
     for [dsn_ver, app_ver, bootlogo_ver, loaderresource_ver, cfg_ver, av_ver] in list_version:
         new_file_path = new_file_path.format(dsn_ver, app_ver)
         new_str_1 = "upgrade-{}-{}.cfg".format(dsn_ver, app_ver)
-        new_str3 = './DSN5414a_100/{}/{}/Upgradefile.bin'.format(dsn_ver, app_ver)
+        new_str3 = './DSN5414a_100/{}/{}/UpgradeFile.bin'.format(dsn_ver, app_ver)
 
-
-        modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3,new_str3)
+        modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
         new_file_path = "./make_upgradefile-{}-{}.sh"
 
 
@@ -470,10 +403,10 @@ def make_incorrect_hardversion():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-incorrect-hardver.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-incorrect-hardver.cfg"
-    new_str3 = './DSN5414a_100/incorrect_hardware/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/incorrect_hardware/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -484,31 +417,28 @@ def make_incorrect_oui():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-incorrect-oui.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-incorrect-oui.cfg"
-    new_str3 = './DSN5414a_100/incorrect_oui/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/incorrect_oui/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
     print("streantool file Generate complete")
 
 
-
 def make_unsigend_app():
-    old_file_path = "./streamtool.cfg"
-    new_file_path = "./streamtool-unsigned-app.cfg"
+    old_file_path = "./make_upgradefile.sh"
+    new_file_path = "./make_upgradefile-unsigned-app.sh"
+    old_str1 = "upgrade.cfg"
+    old_str3 = 'UpgradeFile.bin'
 
-    old_str1 = "SoftWareNo 1016"
-    old_str20 = 'USBOutputFile "UpgradeFile.bin"'
-    old_str30 = 'OTAUpgOutputFile "UpgradeFile.ts"'
+    new_str_1 = "upgrade-unsigned-app.cfg"
+    new_str3 = './DSN5414a_100/unisgned_file/UpgradeFile.bin'
 
-    new_str_1 = "SoftWareNo 15000"
-    new_str20 = 'USBOutputFile "./7414-v2/unsigned_application/UpgradeFile.bin"'
-    new_str30 = 'OTAUpgOutputFile "./7414-v2/unsigned_application/UpgradeFile.ts"'
+    modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-    modify_file_version1(old_file_path, new_file_path, old_str1, str(new_str_1), old_str20, new_str20, old_str30,
-                         new_str30)
+    print("streantool file Generate complete")
 
 
 # def make_wrong_sigend():
@@ -554,10 +484,10 @@ def make_incorrect_manufacturedes():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-incorrect-manufacturedes.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-incorrect-manufacturedes.cfg"
-    new_str3 = './DSN5414a_100/incorrect_manuf/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/incorrect_manuf/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -568,10 +498,10 @@ def make_incorrect_machinedes():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-incorrect-machinedes.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-incorrect-machinedes.cfg"
-    new_str3 = './DSN5414a_100/incorrect_machinedes/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/incorrect_machinedes/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -582,10 +512,10 @@ def make_downloadpid_1030_tableid_1():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-downloadpid-1030-tableid-1.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-downloadpid-1030-tableid-1.cfg"
-    new_str3 = './DSN5414a_100/downloadpid_1030_tableid_1/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/downloadpid_1030_tableid_1/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -596,10 +526,10 @@ def make_dsi_crc():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-dsi-crc.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-dsi-crc.cfg"
-    new_str3 = './DSN5414a_100/dsi_crc/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/dsi_crc/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -610,10 +540,10 @@ def make_dii_crc():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-dii-crc.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-dii-crc.cfg"
-    new_str3 = './DSN5414a_100/dii_crc/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/dii_crc/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -624,10 +554,10 @@ def make_ddb_crc():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_upgradefile-ddb-crc.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-ddb-crc.cfg"
-    new_str3 = './DSN5414a_100/ddb_crc/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/ddb_crc/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -638,10 +568,10 @@ def make_downloadheader_crc():
     old_file_path = "./make_upgradefile.sh"
     new_file_path = "./make_downloadheader-crc.sh"
     old_str1 = "upgrade.cfg"
-    old_str3 = 'Upgradefile.bin'
+    old_str3 = 'UpgradeFile.bin'
 
     new_str_1 = "upgrade-downloadheader-crc.cfg"
-    new_str3 = './DSN5414a_100/downloadheader_crc/Upgradefile.bin'
+    new_str3 = './DSN5414a_100/downloadheader_crc/UpgradeFile.bin'
 
     modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
@@ -649,73 +579,30 @@ def make_downloadheader_crc():
 
 
 def make_big_file():
-    list_version = [10000, 10000, 10000, 10000, 10000, 10000]
     old_file_path = "./make_upgradefile.sh"
-    new_file_path = "./upgrade-big.cfg"
-    old_str1 = "DSN 1000"
-    # old_str2 = 'InputFileNumber 5'
+    new_file_path = "./make_upgradefile-big.sh"
+    old_str1 = "upgrade.cfg"
+    old_str3 = 'UpgradeFile.bin'
 
-    old_str3 = 'InputFile1 "4 1000 enc_fakesigned_app.bin"'
-    old_str4 = 'InputFile2 "6 1000 enc_fakesigned_bootlogo.bin"'
-    old_str20 = 'InputFile3 "7 1000 enc_fakesigned_loaderresource.bin""'
-    old_str30 = 'InputFile4 "10 1000 enc_fakesigned_CFG.bin"'
-    old_str40 = 'InputFile5 "14 1000 enc_fakesigned_av_cpu_256m.bin"'
+    new_str_1 = "upgrade-big.cfg"
+    new_str3 = './DSN5414a_100/big_size/UpgradeFile.bin'
 
-    # old_str50 = 'USBOutputFile "UpgradeFile.bin"'
-    old_str60 = 'OTAUpgOutputFile "UpgradeFile.ts"'
+    modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-    [dsn_ver, app_ver, bootlogo_ver, loaderresource_ver, cfg_ver, av_ver] = list_version
-    new_str_1 = "DSN {}".format(dsn_ver)
-    # new_str2 = 'InputFileNumber 4'
-
-    new_str3 = 'InputFile1 "4 {} big_enc_fakesigned_app.bin"'.format(app_ver)
-    new_str4 = 'InputFile2 "6 {} big_enc_fakesigned_bootlogo.bin"'.format(bootlogo_ver)
-    new_str20 = 'InputFile3 "7 {} big_enc_fakesigned_loaderresource.bin"'.format(loaderresource_ver)
-    new_str30 = 'InputFile4 "10 {} big_enc_fakesigned_CFG.bin"'.format(cfg_ver)
-    new_str40 = 'InputFile5 "14 {} big_enc_fakesigned_av_cpu_256m.bin"'.format(av_ver)
-
-    # new_str50 = 'USBOutputFile "./DSN5414a_100/big_size/UpgradeFile.bin"'
-    new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/big_size/UpgradeFile.ts"'
-
-    modify_file_version7(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3,
-                         new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                         new_str40, old_str60, new_str60)
     print("streantool file Generate complete")
 
 
 def make_excessive_big_file():
-    list_version = [10003, 10003, 10003, 10003, 10003, 10003]
     old_file_path = "./make_upgradefile.sh"
-    new_file_path = "./upgrade-excessive-big.cfg"
-    old_str1 = "DSN 1000"
-    # old_str2 = 'InputFileNumber 5'
+    new_file_path = "./make_upgradefile_excessive-big.sh"
+    old_str1 = "upgrade.cfg"
+    old_str3 = 'UpgradeFile.bin'
 
-    old_str3 = 'InputFile1 "4 1000 enc_fakesigned_app.bin"'
-    old_str4 = 'InputFile2 "6 1000 enc_fakesigned_bootlogo.bin"'
-    old_str20 = 'InputFile3 "7 1000 enc_fakesigned_loaderresource.bin""'
-    old_str30 = 'InputFile4 "10 1000 enc_fakesigned_CFG.bin"'
-    old_str40 = 'InputFile5 "14 1000 enc_fakesigned_av_cpu_256m.bin"'
+    new_str_1 = "upgrade-excessive-big.cfg"
+    new_str3 = './DSN5414a_100/excessive_big_size/UpgradeFile.bin'
 
-    # old_str50 = 'USBOutputFile "UpgradeFile.bin"'
-    old_str60 = 'OTAUpgOutputFile "UpgradeFile.ts"'
+    modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
 
-    [dsn_ver, app_ver, bootlogo_ver, loaderresource_ver, cfg_ver, av_ver] = list_version
-
-    new_str_1 = "DSN {}".format(dsn_ver)
-    # new_str2 = 'InputFileNumber 4'
-
-    new_str3 = 'InputFile1 "4 {} excessive_big_enc_fakesigned_app.bin"'.format(app_ver)
-    new_str4 = 'InputFile2 "6 {} excessive_big_enc_fakesigned_bootlogo.bin"'.format(bootlogo_ver)
-    new_str20 = 'InputFile3 "7 {} excessive_big_enc_fakesigned_loaderresource.bin"'.format(loaderresource_ver)
-    new_str30 = 'InputFile4 "10 {} excessive_big_enc_fakesigned_CFG.bin"'.format(cfg_ver)
-    new_str40 = 'InputFile5 "14 {} excessive_big_enc_fakesigned_av_cpu_256m.bin"'.format(av_ver)
-
-    # new_str50 = 'USBOutputFile "./DSN5414a_100/excessive_big_size/UpgradeFile.bin"'
-    new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/excessive_big_size/UpgradeFile.ts"'
-
-    modify_file_version7(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3,
-                         new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
-                         new_str40, old_str60, new_str60)
     print("streantool file Generate complete")
 
 
@@ -739,6 +626,7 @@ if __name__ == '__main__':
 
     make_incorrect_hardversion()
     make_incorrect_oui()
+    make_unsigend_app()
     # make_wrong_sigend()
     make_incorrect_manufacturedes()
     make_incorrect_machinedes()
@@ -747,6 +635,6 @@ if __name__ == '__main__':
     make_dii_crc()
     make_ddb_crc()
     make_downloadheader_crc()
-    # make_big_file()
-    # make_excessive_big_file()
-    # make_special_bootlogo_file()
+    make_big_file()
+    make_excessive_big_file()
+    make_special_bootlogo_file()
