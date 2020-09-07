@@ -606,6 +606,20 @@ def make_excessive_big_file():
     print("streantool file Generate complete")
 
 
+def make_sys_info_module():
+    old_file_path = "./make_upgradefile.sh"
+    new_file_path = "./make_upgradefile_sys_info.sh"
+    old_str1 = "upgrade.cfg"
+    old_str3 = 'UpgradeFile.bin'
+
+    new_str_1 = "upgrade-sys_info.cfg"
+    new_str3 = './DSN5414a_100/sys_info_module_update/UpgradeFile.bin'
+
+    modify_file_version2(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3, new_str3)
+
+    print("streantool file Generate complete")
+
+
 def create_folder(folder_name):
     """
     base current floder, creat folder
@@ -638,3 +652,4 @@ if __name__ == '__main__':
     make_big_file()
     make_excessive_big_file()
     make_special_bootlogo_file()
+    make_sys_info_module()

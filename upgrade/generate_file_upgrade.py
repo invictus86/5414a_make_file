@@ -243,6 +243,7 @@ def make_special_bootlogo_file():
             new_str20 = ''
             new_str30 = ''
             new_str40 = ''
+            new_str40 = ''
 
             # new_str50 = 'USBOutputFile "./DSN5414a_100/bootlogo_white//UpgradeFile.bin"'
             new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/bootlogo_white/UpgradeFile.ts"'
@@ -602,7 +603,6 @@ def make_unsigend_app():
     print("streantool file Generate complete")
 
 
-
 def make_wrong_sigend():
     list_version = [15000, 15000, 15000, 15000, 15000, 15000]
     old_file_path = "./upgrade.cfg"
@@ -933,10 +933,15 @@ def make_big_file():
     # new_str2 = 'InputFileNumber 4'
 
     new_str3 = 'InputFile1 "4 {} ./big_excessive_file/b_enc_fakesigned_app.bin"'.format(app_ver)
-    new_str4 = 'InputFile2 "6 {} ./big_excessive_file/b_enc_fakesigned_bootlogo.bin"'.format(bootlogo_ver)
-    new_str20 = 'InputFile3 "7 {} ./big_excessive_file/b_enc_fakesigned_loaderresource.bin"'.format(loaderresource_ver)
-    new_str30 = 'InputFile4 "10 {} ./big_excessive_file/b_enc_fakesigned_CFG.bin"'.format(cfg_ver)
-    new_str40 = 'InputFile5 "14 {} ./big_excessive_file/b_enc_fakesigned_av_cpu_256m.bin"'.format(av_ver)
+    # new_str4 = 'InputFile2 "6 {} ./big_excessive_file/b_enc_fakesigned_bootlogo.bin"'.format(bootlogo_ver)
+    # new_str20 = 'InputFile3 "7 {} ./big_excessive_file/b_enc_fakesigned_loaderresource.bin"'.format(loaderresource_ver)
+    # new_str30 = 'InputFile4 "10 {} ./big_excessive_file/b_enc_fakesigned_CFG.bin"'.format(cfg_ver)
+    # new_str40 = 'InputFile5 "14 {} ./big_excessive_file/b_enc_fakesigned_av_cpu_256m.bin"'.format(av_ver)
+
+    new_str4 = ''
+    new_str20 = ''
+    new_str30 = ''
+    new_str40 = ''
 
     # new_str50 = 'USBOutputFile "./DSN5414a_100/big_size/UpgradeFile.bin"'
     new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/big_size/UpgradeFile.ts"'
@@ -969,13 +974,53 @@ def make_excessive_big_file():
     # new_str2 = 'InputFileNumber 4'
 
     new_str3 = 'InputFile1 "4 {} ./big_excessive_file/e_enc_fakesigned_app.bin"'.format(app_ver)
-    new_str4 = 'InputFile2 "6 {} ./big_excessive_file/e_enc_fakesigned_bootlogo.bin"'.format(bootlogo_ver)
-    new_str20 = 'InputFile3 "7 {} ./big_excessive_file/e_enc_fakesigned_loaderresource.bin"'.format(loaderresource_ver)
-    new_str30 = 'InputFile4 "10 {} ./big_excessive_file/e_enc_fakesigned_CFG.bin"'.format(cfg_ver)
-    new_str40 = 'InputFile5 "14 {} ./big_excessive_file/e_enc_fakesigned_av_cpu_256m.bin"'.format(av_ver)
+    # new_str4 = 'InputFile2 "6 {} ./big_excessive_file/e_enc_fakesigned_bootlogo.bin"'.format(bootlogo_ver)
+    # new_str20 = 'InputFile3 "7 {} ./big_excessive_file/e_enc_fakesigned_loaderresource.bin"'.format(loaderresource_ver)
+    # new_str30 = 'InputFile4 "10 {} ./big_excessive_file/e_enc_fakesigned_CFG.bin"'.format(cfg_ver)
+    # new_str40 = 'InputFile5 "14 {} ./big_excessive_file/e_enc_fakesigned_av_cpu_256m.bin"'.format(av_ver)
+
+    new_str4 = ''
+    new_str20 = ''
+    new_str30 = ''
+    new_str40 = ''
 
     # new_str50 = 'USBOutputFile "./DSN5414a_100/excessive_big_size/UpgradeFile.bin"'
     new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/excessive_big_size/UpgradeFile.ts"'
+
+    modify_file_version7(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3,
+                         new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
+                         new_str40, old_str60, new_str60)
+    print("streantool file Generate complete")
+
+
+def make_sys_info_module():
+    list_version = [5000, 5000, 5000, 5000, 5000, 5000]
+    old_file_path = "./upgrade.cfg"
+    new_file_path = "./upgrade-sys_info.cfg"
+    old_str1 = "DSN 1000"
+    # old_str2 = 'InputFileNumber 5'
+
+    old_str3 = 'InputFile1 "4 1000 enc_fakesigned_app.bin"'
+    old_str4 = 'InputFile2 "6 1000 enc_fakesigned_bootlogo.bin"'
+    old_str20 = 'InputFile3 "7 1000 enc_fakesigned_loaderresource.bin"'
+    old_str30 = 'InputFile4 "10 1000 enc_fakesigned_CFG.bin"'
+    old_str40 = 'InputFile5 "14 1000 enc_fakesigned_av_cpu_256m.bin"'
+
+    # old_str50 = 'USBOutputFile "UpgradeFile.bin"'
+    old_str60 = 'OTAUpgOutputFile "UpgradeFile.ts"'
+
+    [dsn_ver, app_ver, bootlogo_ver, loaderresource_ver, cfg_ver, av_ver] = list_version
+    new_str_1 = "DSN {}".format(dsn_ver)
+    # new_str2 = 'InputFileNumber 4'
+
+    new_str3 = 'InputFile1 "12 {} enc_fakesigned_sysinfo.bin"'.format(app_ver)
+    new_str4 = ''
+    new_str20 = ''
+    new_str30 = ''
+    new_str40 = ''
+
+    # new_str50 = 'USBOutputFile "./DSN5414a_100/big_size/UpgradeFile.bin"'
+    new_str60 = 'OTAUpgOutputFile "./DSN5414a_100/sys_info_module_update/UpgradeFile.ts"'
 
     modify_file_version7(old_file_path, new_file_path, old_str1, str(new_str_1), old_str3,
                          new_str3, old_str4, new_str4, old_str20, new_str20, old_str30, new_str30, old_str40,
@@ -1063,3 +1108,4 @@ if __name__ == '__main__':
     make_big_file()
     make_excessive_big_file()
     make_special_bootlogo_file()
+    make_sys_info_module()

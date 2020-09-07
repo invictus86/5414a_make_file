@@ -33,4 +33,5 @@ chmod -R 777 ./*
 ./make_upgradefile-spec-1202.sh
 ./make_upgradefile-spec-1203.sh
 ./make_upgradefile-unsigned-app.sh
+./make_upgradefile_sys_info.sh
 
